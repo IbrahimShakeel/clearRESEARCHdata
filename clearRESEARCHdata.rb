@@ -9,7 +9,7 @@ client = Twitter::REST::Client.new do |config_crap|
 end
 
 #make sure to change the following line. No need to write @ symbol.
-client.search("from:YOUR_TWITTER_HANDLE hello", result_type: "recent").take(1).collect do |tweet|
+client.search("from:YOUR_TWITTER_HANDLE YOUR_MAGIC_WORD_HERE", result_type: "recent").take(1).collect do |tweet|
   content = tweet.text
   _shellScript = "./nukebrowserdata.sh"
   system("sh #{_shellScript}") if content =~ /YOUR_MAGIC_WORD_HERE/i
