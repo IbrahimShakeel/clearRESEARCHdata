@@ -1,6 +1,6 @@
 require 'twitter'
 
-# the twitter API requries this information. So go ahead and creat a new app at twitter
+# the twitter API requries this information. So go ahead and create a new app at twitter
 client = Twitter::REST::Client.new do |config_crap|
   config_crap.consumer_key    = "YOUR_CONSUMER_KEY"
   config_crap.consumer_secret = "YOUR_CONSUMER_SECRET"
